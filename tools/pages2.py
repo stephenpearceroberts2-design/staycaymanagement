@@ -21,7 +21,7 @@ def page_homes():
     }
     body = f'''
 <section class="page-hero page-hero--image">
-  <div class="hero__media">{picture("terrace", "A stone terrace set for dinner overlooking a valley at dusk", "100vw", eager=True)}</div>
+  <div class="hero__media">{picture("farm-autumn", "A flint farmhouse and barns among autumn trees, behind a meadow of wildflowers", "100vw", eager=True)}</div>
   <div class="wrap">{breadcrumbs_html(crumbs)}<span class="eyebrow">For guests</span><h1>Our homes</h1>
   <p class="lede">A curated collection of holiday homes across the Peak District and Derbyshire, chosen for character, comfort and setting.</p></div>
 </section>
@@ -174,7 +174,7 @@ def page_about():
 <section class="page-hero page-hero--split"><div class="wrap">
   <div>{breadcrumbs_html(crumbs)}<span class="eyebrow">About Staycay</span><h1>Local people, looking after exceptional homes</h1>
   <p class="lede">For three years we've looked after holiday homes across the Peak District, Derbyshire and South Yorkshire. Today we care for more than 75 of them, and we're choosing to focus on the very best.</p></div>
-  <div class="page-hero__media">{picture("house-tight", "A stone farmhouse with climbing ivy and lit windows at dusk", "(max-width: 860px) 100vw, 45vw", eager=True)}</div>
+  <div class="page-hero__media">{picture("castlecombe", "A row of stone cottages beside a quiet river", "(max-width: 860px) 100vw, 45vw", eager=True)}</div>
 </div></section>
 <section class="section section--tint" aria-labelledby="story-h"><div class="wrap split">
   <div class="reveal"><span class="eyebrow">Our story</span><h2 id="story-h">Why we do what we do</h2></div>

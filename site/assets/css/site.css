@@ -489,7 +489,7 @@ body.nav-open { overflow: hidden; }
 .site-footer .btn { white-space: nowrap; }
 .hero__media::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(20, 30, 25, .62) 0%, rgba(20, 30, 25, .35) 45%, rgba(20, 30, 25, 0) 75%); }
 .hero__media::after { z-index: 1; }
-@media (max-width: 760px) { .hero__media::before { background: rgba(20, 30, 25, .35); } .hero__media img { object-position: 67% center; } }
+@media (max-width: 760px) { .hero__media::before { background: rgba(20, 30, 25, .35); } .hero__media img { object-position: 52% center; } }
 @media (max-width: 600px) {
   .preview-bar__more { display: none; }
   .hero .btn-row .btn, .cta-band .btn-row .btn, .page-hero--image .btn-row .btn, .inline-cta .btn-row .btn { width: 100%; }

@@ -148,7 +148,7 @@ def areas_html():
 def local_section():
     return f'''<section class="section section--dark dark" aria-labelledby="local-h">
 <div class="wrap"><div class="split split--reverse" style="margin-bottom:clamp(48px,6vw,80px)">
-<div class="split__media split__media--landscape">{picture("landscape", "Heather-covered moorland above a green Peak District valley at sunset", "(max-width: 860px) 100vw, 50vw")}</div>
+<div class="split__media split__media--landscape">{picture("hills", "Rolling green hills above a village of stone houses and slate roofs", "(max-width: 860px) 100vw, 50vw")}</div>
 <div><span class="eyebrow">Local expertise</span><h2 id="local-h">We know these hills, villages and the guests who love them</h2>
 <p class="lede">Local knowledge shapes everything we do: when to raise prices, which weekends sell out first, which trades turn up on a Sunday, and what guests want from a stay in the Peak.</p>
 <a class="link-arrow" href="/about/">About Staycay</a></div></div>
@@ -194,7 +194,7 @@ def page_home():
 
 <section class="section" aria-labelledby="intro-h">
   <div class="wrap split">
-    <div class="split__media reveal">{picture("fireplace", "A stone-walled sitting room with a lit wood-burning stove, linen armchair and logs stacked beneath", "(max-width: 860px) 100vw, 50vw")}{picture("throw", "", "25vw", cls="inset")}</div>
+    <div class="split__media reveal">{picture("armchair", "A sunlit cottage sitting room with a checked armchair, panelled walls and a window onto the garden", "(max-width: 860px) 100vw, 50vw")}{picture("lamp", "", "25vw", cls="inset")}</div>
     <div class="reveal">
       <span class="eyebrow">A specialist, not a generalist</span>
       <h2 id="intro-h">Looking after the Peak District's finest holiday homes</h2>
@@ -295,7 +295,7 @@ def page_owners():
       <p class="lede">Whether you already let your home or you're thinking about it for the first time, we take care of the work and the detail, so it performs well and stays in excellent condition.</p>
       {cta_pair("owners_hero")}
     </div>
-    <div class="page-hero__media">{picture("bedroom", "A calm bedroom with natural linen, a moss-green cushion and a brass wall light", "(max-width: 860px) 100vw, 45vw", eager=True)}</div>
+    <div class="page-hero__media">{picture("roses", "Climbing roses around a leaded window in an old stone cottage wall", "(max-width: 860px) 100vw, 45vw", eager=True)}</div>
   </div>
 </section>
 
@@ -343,10 +343,10 @@ def page_owners():
 def page_services():
     crumbs = [("Home", "/"), ("Services", "/services/")]
     sections = [
-        ("property-care", "care", "Property Care", "Standards you can see, every stay", "Your home is your asset and our reputation. We set clear housekeeping standards, inspect regularly and coordinate maintenance quickly, using trusted local trades.", ["Hotel-standard housekeeping and linen", "Regular property inspections", "Planned and reactive maintenance coordination", "Restocking and guest essentials"], "/services/property-care/", "bathroom", "A freestanding bath beside a stone wall and a window onto green fields"),
-        ("performance", "performance", "Performance", "Pricing and revenue, managed properly", "We price every night individually against local demand, keep your home visible on the channels that matter, and report clearly on how it's performing.", ["Dynamic pricing and minimum-stay strategy", "Distribution across the right channels", "Calendar and availability management", "Clear performance reporting"], "/services/performance/", "dining", "A long oak dining table with fresh hydrangeas in a stone farmhouse kitchen"),
-        ("representation", "representation", "Representation", "Presented as it deserves to be", "Guests choose with their eyes. We arrange professional photography, write listing copy that captures what makes your home special, and advise on the details that make a stay memorable.", ["Professional photography", "Listing copy and presentation", "Styling and guest-experience advice", "Inclusion in our curated collection where it fits"], None, "kitchen", "A deep green farmhouse kitchen with oak table, pendant lights and stone walls"),
-        ("freedom", "freedom", "Freedom", "All of the reward, none of the running around", "Guest messages at midnight, changeovers on a bank holiday, a boiler on a Sunday. We handle it, so owning a holiday home feels like owning a holiday home again.", ["One point of contact who knows your home", "Guest communication around the clock", "Owner stays planned around peak periods", "Monthly statements without the admin"], None, "terrace", "A stone terrace set for dinner with views across a valley at dusk"),
+        ("property-care", "care", "Property Care", "Standards you can see, every stay", "Your home is your asset and our reputation. We set clear housekeeping standards, inspect regularly and coordinate maintenance quickly, using trusted local trades.", ["Hotel-standard housekeeping and linen", "Regular property inspections", "Planned and reactive maintenance coordination", "Restocking and guest essentials"], "/services/property-care/", "castlecombe-wide", "A row of well-kept stone cottages on a cobbled lane"),
+        ("performance", "performance", "Performance", "Pricing and revenue, managed properly", "We price every night individually against local demand, keep your home visible on the channels that matter, and report clearly on how it's performing.", ["Dynamic pricing and minimum-stay strategy", "Distribution across the right channels", "Calendar and availability management", "Clear performance reporting"], "/services/performance/", "flint-cottage", "A flint and brick cottage with a lavender-filled front garden on a sunny day"),
+        ("representation", "representation", "Representation", "Presented as it deserves to be", "Guests choose with their eyes. We arrange professional photography, write listing copy that captures what makes your home special, and advise on the details that make a stay memorable.", ["Professional photography", "Listing copy and presentation", "Styling and guest-experience advice", "Inclusion in our curated collection where it fits"], None, "roses", "Climbing roses around a leaded window in an old stone cottage wall"),
+        ("freedom", "freedom", "Freedom", "All of the reward, none of the running around", "Guest messages at midnight, changeovers on a bank holiday, a boiler on a Sunday. We handle it, so owning a holiday home feels like owning a holiday home again.", ["One point of contact who knows your home", "Guest communication around the clock", "Owner stays planned around peak periods", "Monthly statements without the admin"], None, "sheep-house", "Sheep grazing in a meadow below a stone house among the trees"),
     ]
     blocks = []
     for i, (anchor, ic, title, h, text, items, href, img, alt) in enumerate(sections):
@@ -407,7 +407,7 @@ def page_full_management():
         "Complete holiday home management in the Peak District, Derbyshire and South Yorkshire: guests, housekeeping, maintenance, pricing and reporting, all handled.",
         "Full Management: everything handled",
         "Our flagship service. We look after the guests, the home and the numbers, so your property performs as it should without taking over your life.",
-        "living", "A stone-walled sitting room with wood-burning stove, linen sofa and green cushions",
+        "armchair-wide", "A sunlit cottage sitting room with a checked armchair and a window onto the garden",
         [("Guests", ["Enquiries, bookings and arrival information", "Guest support throughout the stay", "Reviews and follow-up"]),
          ("Your home", ["Housekeeping, linen and changeovers", "Regular inspections", "Maintenance with trusted local trades"]),
          ("Revenue", ["Dynamic pricing against local demand", "Distribution across the right channels", "Professional photography and listing"]),
@@ -428,7 +428,7 @@ def page_brm():
         "Expert pricing, listings and bookings for holiday homes in the Peak District, Derbyshire and South Yorkshire, for owners who look after the home themselves.",
         "Bookings &amp; Revenue Management",
         "You look after the home and the welcome. We handle pricing, listings and bookings, so your calendar is fuller and every night is priced right.",
-        "kitchen", "A deep green farmhouse kitchen with oak table and pendant lights",
+        "castlecombe-wide", "A row of well-kept stone cottages on a cobbled lane",
         [("Pricing", ["Dynamic nightly rates", "Seasonal and event-led strategy", "Minimum-stay rules to close gaps"]),
          ("Listings &amp; distribution", ["Listing creation and optimisation", "Channel and calendar management", "Presentation advice"]),
          ("Bookings &amp; reporting", ["Guest enquiries and booking communication", "Performance reporting", "Regular strategy reviews"])],
@@ -450,7 +450,7 @@ def page_property_care():
 <section class="page-hero page-hero--split"><div class="wrap">
   <div>{breadcrumbs_html(crumbs)}<span class="eyebrow">Property Care</span><h1>Standards you can see, every stay</h1>
   <p class="lede">Your home is your asset, and our reputation. We look after it with clear standards, regular inspections and maintenance handled before small things become big ones.</p>{cta_pair("care_hero", service="full-management")}</div>
-  <div class="page-hero__media">{picture("bathroom", "A freestanding bath beside a stone wall with a window onto fields", "(max-width: 860px) 100vw, 45vw", eager=True)}</div>
+  <div class="page-hero__media">{picture("lamp", "A turned wooden lamp glowing on a side table beside a stone wall", "(max-width: 860px) 100vw, 45vw", eager=True)}</div>
 </div></section>
 <section class="section section--tint" aria-labelledby="stand-h"><div class="wrap">
   <div class="section-head"><span class="eyebrow">How we care for homes</span><h2 id="stand-h">Three layers of care</h2></div>
@@ -478,7 +478,7 @@ def page_performance():
 <section class="page-hero page-hero--split"><div class="wrap">
   <div>{breadcrumbs_html(crumbs)}<span class="eyebrow">Performance</span><h1>Pricing, revenue and distribution, managed properly</h1>
   <p class="lede">The difference between a good year and a great one is usually made in the detail: the right price for every night, the right channels and the right minimum stays.</p>{cta_pair("performance_hero")}</div>
-  <div class="page-hero__media">{picture("dining", "A long oak dining table with hydrangeas in a farmhouse kitchen", "(max-width: 860px) 100vw, 45vw", eager=True)}</div>
+  <div class="page-hero__media">{picture("cotswold-house", "A honey-coloured stone house with stone-tiled roof and tall chimneys", "(max-width: 860px) 100vw, 45vw", eager=True)}</div>
 </div></section>
 <section class="section section--tint" aria-labelledby="perf-h"><div class="wrap">
   <div class="section-head"><span class="eyebrow">What we do</span><h2 id="perf-h">Three levers, pulled together</h2></div>
@@ -516,7 +516,7 @@ def page_how():
 <p class="lede">A straightforward path from first conversation to a home that's fully booked and beautifully looked after.</p>{cta_pair("how_hero")}</div></section>
 <section class="section section--tint" aria-labelledby="steps-h"><div class="wrap"><h2 id="steps-h" class="visually-hidden">The four steps</h2>{steps_html(detailed)}</div></section>
 <section class="section" aria-labelledby="pr-h"><div class="wrap split">
-  <div class="split__media reveal">{picture("olive", "", "(max-width: 860px) 100vw, 50vw")}</div>
+  <div class="split__media reveal">{picture("sheep-house", "Sheep grazing in a meadow below a stone house among the trees", "(max-width: 860px) 100vw, 50vw")}</div>
   <div class="reveal"><span class="eyebrow">What guides us</span><h2 id="pr-h">The principles behind every home we manage</h2>
   <div class="stack">{"".join(f"<div><h3>{t}</h3><p class='muted'>{d}</p></div>" for t, d in principles)}</div></div>
 </div></section>

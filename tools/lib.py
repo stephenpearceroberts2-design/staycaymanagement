@@ -182,7 +182,7 @@ def faq_html(faqs):
     return "".join(out)
 
 
-def cta_band(heading="Find out what your home could achieve", text=None, location="cta_band", image="landscape", service=None):
+def cta_band(heading="Find out what your home could achieve", text=None, location="cta_band", image="hills", service=None):
     text = text or "Request a free, no-obligation property appraisal. We'll come back to you within 48 hours."
     return f"""
 <section class="cta-band dark" aria-labelledby="cta-{location}">

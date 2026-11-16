@@ -17,21 +17,15 @@ PHOTOS = ROOT / "src" / "photos"
 # originals are kept in tools/src/originals/ with their licence noted in CREDITS.md.
 # name: (left, top, right, bottom) on the 1536x1024 mood board
 CROPS = {
-    "house":     (316, 4, 1069, 430),
-    "house-tight": (560, 30, 1069, 430),
     "living":    (4, 442, 575, 745),
-    "fireplace": (150, 442, 575, 745),
     "bedroom":   (588, 442, 987, 745),
     "kitchen":   (998, 442, 1532, 745),
     "dining":    (998, 560, 1350, 745),
-    "landscape": (4, 756, 365, 1020),
-    "olive":     (377, 756, 565, 1020),
-    "throw":     (578, 756, 765, 1020),
     "bathroom":  (777, 756, 1165, 1020),
     "terrace":   (316, 230, 760, 430),
 }
 
-WIDTHS = [480, 800, 1200, 1600]
+WIDTHS = [480, 800, 1200, 1600, 2000, 2400]
 
 
 def load(name):
@@ -50,17 +44,18 @@ def main():
         im = load(name)
         made = []
         real = (PHOTOS / f"{name}.jpg").exists()
-        for w in WIDTHS:
-            if real and w > im.width:
-                break
+        widths = [w for w in WIDTHS if w <= im.width] if real else WIDTHS
+        if real and im.width - widths[-1] > 150:
+            widths.append(im.width)  # serve the full resolution to high-density screens
+        for w in widths:
             # mood-board crops are small; allow up to ~2.2x upscale, then stop
-            if w > im.width * 2.2 and made:
+            if not real and (w > im.width * 2.2 and made or w > 1600):
                 break
             h = round(im.height * w / im.width)
             r = im.resize((w, h), Image.LANCZOS)
             if w > im.width:
                 r = r.filter(ImageFilter.UnsharpMask(radius=1.2, percent=60, threshold=2))
-            r.save(OUT / f"{name}-{w}.webp", "WEBP", quality=80, method=6)
+            r.save(OUT / f"{name}-{w}.webp", "WEBP", quality=82 if real else 80, method=6)
             made.append(w)
         # small blurred LQIP colour for backgrounds
         print(name, im.size, "->", made)
