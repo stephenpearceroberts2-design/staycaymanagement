@@ -13,6 +13,8 @@ OUT = ROOT.parent / "site" / "assets" / "img"
 BOARD = ROOT / "src" / "moodboard.png"
 PHOTOS = ROOT / "src" / "photos"
 
+# Real photos in tools/src/photos/<name>.jpg are used as-is (already cropped);
+# originals are kept in tools/src/originals/ with their licence noted in CREDITS.md.
 # name: (left, top, right, bottom) on the 1536x1024 mood board
 CROPS = {
     "house":     (316, 4, 1069, 430),
@@ -38,15 +40,21 @@ def load(name):
     p = PHOTOS / f"{name}.jpg"
     if p.exists():
         return Image.open(p).convert("RGB")
+    if name not in CROPS:
+        raise SystemExit(f"No source for {name}")
     return Image.open(BOARD).convert("RGB").crop(CROPS[name])
 
 
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
-    for name in CROPS:
+    names = list(CROPS) + [p.stem for p in sorted(PHOTOS.glob("*.jpg")) if p.stem not in CROPS]
+    for name in names:
         im = load(name)
         made = []
+        real = (PHOTOS / f"{name}.jpg").exists()
         for w in WIDTHS:
+            if real and w > im.width:
+                break
             # mood-board crops are small; allow up to ~2.2x upscale, then stop
             if w > im.width * 2.2 and made:
                 break

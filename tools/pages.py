@@ -173,7 +173,7 @@ def page_home():
     articles = C.ARTICLES[:3]
     body = f'''
 <section class="hero" aria-labelledby="hero-h">
-  <div class="hero__media">{picture("house", "A restored stone farmhouse with lit windows and a lavender-lined terrace overlooking a Peak District valley at dusk", "100vw", eager=True)}</div>
+  <div class="hero__media">{picture("hero", "A country cottage with climbing roses behind a sunny lawn and flower borders, with fields beyond", "100vw", eager=True)}</div>
   <div class="wrap hero__content">
     <span class="eyebrow">Holiday home management · Peak District</span>
     <h1 id="hero-h">Exceptional homes. <em>Exceptionally managed.</em></h1>

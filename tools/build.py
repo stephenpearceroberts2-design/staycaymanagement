@@ -72,10 +72,10 @@ def make_brand_images():
 
     # OG image 1200x630: photo left, green panel right
     og = Image.new("RGB", (1200, 630), peak)
-    photo = Image.open(lib.IMG / "house-1200.webp").convert("RGB")
+    photo = Image.open(lib.IMG / "hero-1200.webp").convert("RGB")
     ratio = 630 / photo.height
     photo = photo.resize((round(photo.width * ratio), 630), Image.LANCZOS)
-    left = (photo.width - 720) // 2
+    left = min(photo.width - 720, max(0, round(photo.width * 0.67) - 360))
     og.paste(photo.crop((left, 0, left + 720, 630)), (0, 0))
     d = ImageDraw.Draw(og)
     f_brand = ImageFont.truetype(serif_path, 52)
