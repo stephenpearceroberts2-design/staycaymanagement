@@ -1,0 +1,64 @@
+"""Cut placeholder photography out of the client's mood board and export
+responsive WebP sizes. Replace with real photography before launch: drop
+new source JPEGs into tools/src/photos/<name>.jpg and rerun; files there
+take priority over the mood-board crops.
+
+Usage: python3 tools/make_images.py
+"""
+from pathlib import Path
+from PIL import Image, ImageFilter, ImageEnhance
+
+ROOT = Path(__file__).resolve().parent
+OUT = ROOT.parent / "site" / "assets" / "img"
+BOARD = ROOT / "src" / "moodboard.png"
+PHOTOS = ROOT / "src" / "photos"
+
+# name: (left, top, right, bottom) on the 1536x1024 mood board
+CROPS = {
+    "house":     (316, 4, 1069, 430),
+    "house-tight": (560, 30, 1069, 430),
+    "living":    (4, 442, 575, 745),
+    "fireplace": (150, 442, 575, 745),
+    "bedroom":   (588, 442, 987, 745),
+    "kitchen":   (998, 442, 1532, 745),
+    "dining":    (998, 560, 1350, 745),
+    "landscape": (4, 756, 365, 1020),
+    "olive":     (377, 756, 565, 1020),
+    "throw":     (578, 756, 765, 1020),
+    "bathroom":  (777, 756, 1165, 1020),
+    "terrace":   (316, 230, 760, 430),
+    "stone":     (1112, 270, 1201, 366),
+    "oak":       (1216, 270, 1305, 366),
+}
+
+WIDTHS = [480, 800, 1200, 1600]
+
+
+def load(name):
+    p = PHOTOS / f"{name}.jpg"
+    if p.exists():
+        return Image.open(p).convert("RGB")
+    return Image.open(BOARD).convert("RGB").crop(CROPS[name])
+
+
+def main():
+    OUT.mkdir(parents=True, exist_ok=True)
+    for name in CROPS:
+        im = load(name)
+        made = []
+        for w in WIDTHS:
+            # mood-board crops are small; allow up to ~2.2x upscale, then stop
+            if w > im.width * 2.2 and made:
+                break
+            h = round(im.height * w / im.width)
+            r = im.resize((w, h), Image.LANCZOS)
+            if w > im.width:
+                r = r.filter(ImageFilter.UnsharpMask(radius=1.2, percent=60, threshold=2))
+            r.save(OUT / f"{name}-{w}.webp", "WEBP", quality=80, method=6)
+            made.append(w)
+        # small blurred LQIP colour for backgrounds
+        print(name, im.size, "->", made)
+
+
+if __name__ == "__main__":
+    main()
