@@ -21,7 +21,7 @@ def page_homes():
     }
     body = f'''
 <section class="page-hero page-hero--image">
-  <div class="hero__media">{picture("farm-autumn", "A flint farmhouse and barns among autumn trees, behind a meadow of wildflowers", "100vw", eager=True)}</div>
+  <div class="hero__media">{picture("garden-cottage", "A country cottage behind a sunny lawn and flower borders, with fields beyond", "100vw", eager=True)}</div>
   <div class="wrap">{breadcrumbs_html(crumbs)}<span class="eyebrow">For guests</span><h1>Our homes</h1>
   <p class="lede">A curated collection of holiday homes across the Peak District and Derbyshire, chosen for character, comfort and setting.</p></div>
 </section>

@@ -38,7 +38,7 @@ HOMES = [
         ],
         "features": ["Wood-burning stove", "South-facing terrace", "Fully equipped kitchen with range cooker", "Three en-suite bedrooms", "Fast Wi-Fi", "Off-road parking for three cars", "Boot room and drying space", "Walks from the door"],
         "nearby": "Hathersage village, with its outdoor pool, cafés and pubs, is a short walk away. Stanage Edge, Ladybower Reservoir and Castleton are all within a short drive.",
-        "images": ["farm-autumn", "living", "kitchen", "bedroom", "bathroom", "hills"],
+        "images": ["garden-cottage", "living", "kitchen", "bedroom", "bathroom", "hills"],
         "booking_url": "{BOOKING_BASE}/millstone-barn",
         "placeholder": True,
     },
@@ -176,7 +176,7 @@ CASE_STUDIES = [
         "short": "How a remote owner went from juggling cleaners and messages to a busier, better-reviewed barn.",
         "service": "Full Management",
         "location": "Hope Valley, Peak District",
-        "image": "farm-autumn",
+        "image": "flint-cottage",
         "images": ["armchair-wide", "kitchen"],
         "stats": [("+38%", "gross booking revenue, year one"), ("4.9", "average guest rating"), ("0", "hours a week the owners now spend on it")],
         "challenge": [
