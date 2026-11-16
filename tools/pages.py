@@ -173,7 +173,7 @@ def page_home():
     articles = C.ARTICLES[:3]
     body = f'''
 <section class="hero" aria-labelledby="hero-h">
-  <div class="hero__media">{picture("hero", "A stone house among the trees above a meadow where sheep are grazing", "100vw", eager=True)}</div>
+  <div class="hero__media">{picture("hero", "A row of honey-coloured stone cottages with stone-tiled roofs along a cobbled lane", "100vw", eager=True)}</div>
   <div class="wrap hero__content">
     <span class="eyebrow">Holiday home management · Peak District</span>
     <h1 id="hero-h">Exceptional homes. <em>Exceptionally managed.</em></h1>
@@ -194,7 +194,7 @@ def page_home():
 
 <section class="section" aria-labelledby="intro-h">
   <div class="wrap split">
-    <div class="split__media reveal">{picture("castlecombe", "A row of stone cottages beside a quiet river", "(max-width: 860px) 100vw, 50vw")}{picture("lamp", "", "25vw", cls="inset")}</div>
+    <div class="split__media reveal">{picture("armchair", "A sunlit cottage sitting room with a checked armchair, panelled walls and a window onto the garden", "(max-width: 860px) 100vw, 50vw")}{picture("lamp", "", "25vw", cls="inset")}</div>
     <div class="reveal">
       <span class="eyebrow">A specialist, not a generalist</span>
       <h2 id="intro-h">Looking after the Peak District's finest holiday homes</h2>
