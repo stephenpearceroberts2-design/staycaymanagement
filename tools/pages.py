@@ -173,7 +173,7 @@ def page_home():
     articles = C.ARTICLES[:3]
     body = f'''
 <section class="hero" aria-labelledby="hero-h">
-  <div class="hero__media">{picture("hero", "A flint and brick farmhouse with barns among autumn trees, behind a meadow of wildflowers", "100vw", eager=True)}</div>
+  <div class="hero__media">{picture("hero", "A stone house among the trees above a meadow where sheep are grazing", "100vw", eager=True)}</div>
   <div class="wrap hero__content">
     <span class="eyebrow">Holiday home management · Peak District</span>
     <h1 id="hero-h">Exceptional homes. <em>Exceptionally managed.</em></h1>
@@ -346,7 +346,7 @@ def page_services():
         ("property-care", "care", "Property Care", "Standards you can see, every stay", "Your home is your asset and our reputation. We set clear housekeeping standards, inspect regularly and coordinate maintenance quickly, using trusted local trades.", ["Hotel-standard housekeeping and linen", "Regular property inspections", "Planned and reactive maintenance coordination", "Restocking and guest essentials"], "/services/property-care/", "castlecombe-wide", "A row of well-kept stone cottages on a cobbled lane"),
         ("performance", "performance", "Performance", "Pricing and revenue, managed properly", "We price every night individually against local demand, keep your home visible on the channels that matter, and report clearly on how it's performing.", ["Dynamic pricing and minimum-stay strategy", "Distribution across the right channels", "Calendar and availability management", "Clear performance reporting"], "/services/performance/", "flint-cottage", "A flint and brick cottage with a lavender-filled front garden on a sunny day"),
         ("representation", "representation", "Representation", "Presented as it deserves to be", "Guests choose with their eyes. We arrange professional photography, write listing copy that captures what makes your home special, and advise on the details that make a stay memorable.", ["Professional photography", "Listing copy and presentation", "Styling and guest-experience advice", "Inclusion in our curated collection where it fits"], None, "roses", "Climbing roses around a leaded window in an old stone cottage wall"),
-        ("freedom", "freedom", "Freedom", "All of the reward, none of the running around", "Guest messages at midnight, changeovers on a bank holiday, a boiler on a Sunday. We handle it, so owning a holiday home feels like owning a holiday home again.", ["One point of contact who knows your home", "Guest communication around the clock", "Owner stays planned around peak periods", "Monthly statements without the admin"], None, "sheep-house", "Sheep grazing in a meadow below a stone house among the trees"),
+        ("freedom", "freedom", "Freedom", "All of the reward, none of the running around", "Guest messages at midnight, changeovers on a bank holiday, a boiler on a Sunday. We handle it, so owning a holiday home feels like owning a holiday home again.", ["One point of contact who knows your home", "Guest communication around the clock", "Owner stays planned around peak periods", "Monthly statements without the admin"], None, "farm-autumn", "A flint and brick farmhouse among autumn trees, behind a meadow of wildflowers"),
     ]
     blocks = []
     for i, (anchor, ic, title, h, text, items, href, img, alt) in enumerate(sections):
