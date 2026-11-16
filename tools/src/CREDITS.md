@@ -5,7 +5,7 @@ All placeholder photography below is from Pexels, free to use under the Pexels l
 | Site image | Pexels original | Used for |
 |---|---|---|
 | `garden-cottage` | pexels-field-cottage-18957196 | Our Homes header, Millstone Barn |
-| `hero` | pexels-spencphoto-39932416 | Homepage hero, social share image |
+| `hero` | pexels-benprater-38592548 | Homepage hero, social share image |
 | `farm-autumn` | pexels-girish-nayyar-36922140 | Services: Freedom section |
 | `hills` | pexels-lebele-25020231 | Local expertise, call-to-action bands, Hope Valley article |
 | `armchair`, `armchair-wide` | pexels-valeriia-svietlova-11837610 | Homepage intro, Full Management header, Curlew Cottage, article |
