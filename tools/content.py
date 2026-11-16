@@ -114,7 +114,7 @@ HOMES = [
         ],
         "features": ["Five bedrooms, four bathrooms", "Two sitting rooms", "Terrace with outdoor dining", "Wood-burning stove", "Fast Wi-Fi", "Parking for four cars"],
         "nearby": "Ashford-in-the-Water's sheepwash bridge and village pub are close by, with Bakewell a short drive away.",
-        "images": ["cotswold-house", "terrace", "kitchen", "living", "bedroom"],
+        "images": ["farm-autumn", "terrace", "kitchen", "living", "bedroom"],
         "booking_url": "{BOOKING_BASE}/fern-house",
         "placeholder": True,
     },
@@ -281,7 +281,7 @@ ARTICLES = [
         "category": "owners",
         "date": "2026-10-28",
         "read": "5 min read",
-        "image": "cotswold-house",
+        "image": "castlecombe-wide",
         "excerpt": "Some owners want everything handled. Others love looking after their home but want help with pricing and bookings. Here's how to work out which you are.",
         "body": """
 <p>There's no single right way to run a holiday home. The best set-up depends on where you live, how much time you have, and which parts of the job you actually enjoy.</p>

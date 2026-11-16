@@ -173,7 +173,7 @@ def page_home():
     articles = C.ARTICLES[:3]
     body = f'''
 <section class="hero" aria-labelledby="hero-h">
-  <div class="hero__media">{picture("hero", "A row of honey-coloured stone cottages with stone-tiled roofs along a cobbled lane", "100vw", eager=True)}</div>
+  <div class="hero__media">{picture("hero", "A honey-coloured stone house with stone-tiled roof and dormer windows in late afternoon sun", "100vw", eager=True)}</div>
   <div class="wrap hero__content">
     <span class="eyebrow">Holiday home management · Peak District</span>
     <h1 id="hero-h">Exceptional homes. <em>Exceptionally managed.</em></h1>
@@ -478,7 +478,7 @@ def page_performance():
 <section class="page-hero page-hero--split"><div class="wrap">
   <div>{breadcrumbs_html(crumbs)}<span class="eyebrow">Performance</span><h1>Pricing, revenue and distribution, managed properly</h1>
   <p class="lede">The difference between a good year and a great one is usually made in the detail: the right price for every night, the right channels and the right minimum stays.</p>{cta_pair("performance_hero")}</div>
-  <div class="page-hero__media">{picture("cotswold-house", "A honey-coloured stone house with stone-tiled roof and tall chimneys", "(max-width: 860px) 100vw, 45vw", eager=True)}</div>
+  <div class="page-hero__media">{picture("stove", "A cast-iron wood-burning stove set into an exposed brick chimney breast", "(max-width: 860px) 100vw, 45vw", eager=True)}</div>
 </div></section>
 <section class="section section--tint" aria-labelledby="perf-h"><div class="wrap">
   <div class="section-head"><span class="eyebrow">What we do</span><h2 id="perf-h">Three levers, pulled together</h2></div>
